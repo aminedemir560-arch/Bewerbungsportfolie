@@ -252,6 +252,27 @@
     padding: 18px 18px 16px;
     position: relative;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  a.cert-card.done {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  a.cert-card.done:hover,
+  a.cert-card.done:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px -10px rgba(59,36,23,0.3);
+    border-color: var(--bordeaux);
+  }
+  .cert-link-hint {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    color: var(--bordeaux);
+    margin-top: 8px;
+    text-transform: uppercase;
   }
   .cert-card::before {
     content: '';
@@ -901,21 +922,24 @@
   </div>
 
   <div class="cert-grid">
-    <div class="cert-card done">
+    <a class="cert-card done" href="cer-2026-456.pdf" target="_blank" rel="noopener">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Social-Media Experte (m/w/d)</div>
-      <div class="cert-meta">180 UE · 08.06.–03.07.2026 · ADZ / Morphos GmbH</div>
-    </div>
-    <div class="cert-card done">
+      <div class="cert-meta">180 UE · 08.06. bis 03.07.2026 · ADZ / Morphos GmbH</div>
+      <span class="cert-link-hint">Zertifikat ansehen ↗</span>
+    </a>
+    <a class="cert-card done" href="cer-2026-512.pdf" target="_blank" rel="noopener">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Social-Media Experte mit Vertiefung (m/w/d)</div>
-      <div class="cert-meta">180 UE · 06.07.–31.07.2026 · Social Recruiting, Employer Branding, Community Management</div>
-    </div>
-    <div class="cert-card done">
+      <div class="cert-meta">180 UE · 06.07. bis 31.07.2026 · Social Recruiting, Employer Branding, Community Management</div>
+      <span class="cert-link-hint">Zertifikat ansehen ↗</span>
+    </a>
+    <a class="cert-card done" href="cer-2026-560.pdf" target="_blank" rel="noopener">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Online-Marketing Management (m/w/d)</div>
-      <div class="cert-meta">180 UE · 03.08.–28.08.2026 · SEO, Conversion-Optimierung, E-Mail-Marketing, KI-Tools</div>
-    </div>
+      <div class="cert-meta">180 UE · 03.08. bis 28.08.2026 · SEO, Conversion-Optimierung, E-Mail-Marketing, KI-Tools</div>
+      <span class="cert-link-hint">Zertifikat ansehen ↗</span>
+    </a>
     <div class="cert-card progress">
       <span class="cert-badge">In Weiterbildung</span>
       <div class="cert-name">E-Commerce- und Onlinemarketing-Managerin</div>
