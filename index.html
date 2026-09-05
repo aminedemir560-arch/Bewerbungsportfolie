@@ -438,12 +438,175 @@
     font-style: normal;
     font-weight: 400;
   }
+
+  /* Sitenav */
+  .sitenav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(250, 246, 242, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--nude);
+  }
+  .sitenav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sitenav-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--espresso);
+    text-decoration: none;
+  }
+  .sitenav-links { display: flex; gap: 26px; }
+  .sitenav-links a {
+    font-size: 12.5px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--espresso);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .sitenav-links a:hover,
+  .sitenav-links a:focus-visible {
+    color: var(--bordeaux);
+    border-bottom-color: var(--bordeaux);
+  }
+
+  /* Case-Study Kachelübersicht */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .case-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--nude);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px -6px rgba(59,36,23,0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .case-card:hover,
+  .case-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px -10px rgba(59,36,23,0.28);
+  }
+  .case-thumb {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .case-thumb svg { width: 40px; height: 40px; }
+  .case-thumb.thumb-website { background: linear-gradient(135deg, #1C1C1C, #3A2A1E); }
+  .case-thumb.thumb-website svg { stroke: #F97316; }
+  .case-thumb.thumb-landingpage { background: linear-gradient(135deg, var(--bordeaux), #4A1420); }
+  .case-thumb.thumb-landingpage svg { stroke: var(--gold); }
+  .case-thumb.thumb-fritzkola { background: linear-gradient(135deg, var(--cappuccino), var(--espresso)); }
+  .case-thumb.thumb-fritzkola svg { stroke: var(--creme); }
+  .case-badge {
+    position: absolute;
+    top: 12px; left: 12px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.92);
+    color: var(--espresso);
+  }
+  .case-badge.badge-live { color: #1F6B33; }
+  .case-badge.badge-performance { color: var(--bordeaux); }
+  .case-badge.badge-concept { color: var(--cappuccino); }
+  .case-body {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .case-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--espresso);
+    margin-bottom: 8px;
+  }
+  .case-card-desc {
+    font-size: 13.5px;
+    color: var(--espresso);
+    opacity: 0.85;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .case-card-btn {
+    align-self: flex-start;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--bordeaux);
+    border: 1px solid var(--bordeaux);
+    border-radius: 20px;
+    padding: 8px 16px;
+  }
+  .case-card:hover .case-card-btn,
+  .case-card:focus-visible .case-card-btn {
+    background: var(--bordeaux);
+    color: #fff;
+  }
+
+  .case-group-label {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--cappuccino);
+    margin: 46px 0 10px;
+  }
+  .case-group-label:first-of-type { margin-top: 30px; }
+
+  @media (max-width: 720px) {
+    .case-grid { grid-template-columns: repeat(2, 1fr); }
+    .sitenav-inner { padding: 12px 20px; flex-direction: column; gap: 8px; }
+    .sitenav-links { gap: 18px; }
+  }
+  @media (max-width: 480px) {
+    .case-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+
+<nav class="sitenav">
+  <div class="sitenav-inner">
+    <a class="sitenav-brand" href="#top">AD</a>
+    <div class="sitenav-links">
+      <a href="#case-studies">Case Studies</a>
+      <a href="#kompetenzen">Kompetenzen</a>
+      <a href="#weiterbildung">Weiterbildung</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
 <div class="wrap">
 
-  <header>
+  <header id="top">
     <img src="profile.jpg" alt="Amine Demir" style="width:200px; height:200px; object-fit:cover; object-position:50% 30%; border-radius:50%; border:2px solid var(--gold); margin-bottom:20px;">
     <div class="monogram">AD</div>
     <h1 class="wordmark">AMINE DEMIR</h1>
@@ -484,15 +647,122 @@
 
   <div class="divider"></div>
 
-  <!-- 3. PROJEKTE / ARBEITSPROBEN -->
-  <h2>Projekte <span class="amp">&amp;</span> Arbeitsproben</h2>
+  <!-- 3. PROJEKTE / CASE STUDIES -->
+  <h2 id="case-studies">Projekte <span class="amp">&amp;</span> Case Studies</h2>
+
+  <div class="case-grid">
+    <a class="case-card" href="#detail-ds-pflasterbau">
+      <div class="case-thumb thumb-website">
+        <span class="case-badge badge-live">Live-Kundenprojekt</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><circle cx="6.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>
+      </div>
+      <div class="case-body">
+        <div class="case-card-title">DS Pflasterbau</div>
+        <p class="case-card-desc">Konzeption und Umsetzung einer professionellen Unternehmenswebsite mit lokaler SEO und digitaler Sichtbarkeit.</p>
+        <span class="case-card-btn">Case Study ansehen</span>
+      </div>
+    </a>
+
+    <a class="case-card" href="#detail-landingpage">
+      <div class="case-thumb thumb-landingpage">
+        <span class="case-badge badge-performance">Live-Performance-Projekt</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+      </div>
+      <div class="case-body">
+        <div class="case-card-title">Kampagnen-Landingpage</div>
+        <p class="case-card-desc">Entwicklung einer conversionorientierten Landingpage zur Leadgenerierung mit Meta Ads und direkter Kontaktmöglichkeit.</p>
+        <span class="case-card-btn">Case Study ansehen</span>
+      </div>
+    </a>
+
+    <a class="case-card" href="#detail-fritzkola">
+      <div class="case-thumb thumb-fritzkola">
+        <span class="case-badge badge-concept">Konzeptprojekt Weiterbildung</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6"></path><path d="M8 9h8l1.5 11h-11z"></path><path d="M8 13h8"></path></svg>
+      </div>
+      <div class="case-body">
+        <div class="case-card-title">Fritz-Kola</div>
+        <p class="case-card-desc">Entwicklung einer Performance-Marketing-Kampagne im Rahmen meiner Weiterbildung. Kein offizieller Auftrag der Marke Fritz-Kola.</p>
+        <span class="case-card-btn">Projekt ansehen</span>
+      </div>
+    </a>
+  </div>
+
   <div class="projects">
 
-    <div class="project-card">
-      <span class="project-tag">Beispielprojekt Modul 1 (Übungsaufgabe)</span>
-      <div class="project-title">DS Pflasterbau: Social-Media- <span class="amp">&amp;</span> Content-Strategie</div>
-      <p>Als Übungsaufgabe im ersten Modul meiner Weiterbildung habe ich für einen selbst gewählten Handwerksbetrieb beispielhaft eine vollständige Social-Media-Strategie ausgearbeitet: Zielgruppenanalyse, Kanalstrategie, Content-Planung und Redaktionsplan. Kein reales Kundenprojekt, sondern eine praktische Übung zur Anwendung meiner Social-Media-Kompetenz. Mit jedem weiteren Modul kommen ähnliche Beispielprojekte aus zusätzlichen Bereichen wie E-Commerce, Performance Marketing und KI hinzu.</p>
+    <div class="case-group-label" id="detail-ds-pflasterbau">Case Study 1 — DS Pflasterbau</div>
+
+    <div class="showcase showcase-ds">
+      <span class="showcase-tag">Live-Projekt · Reale Website</span>
+      <div class="showcase-title">DS Pflasterbau: Website-Relaunch <span class="amp">&amp;</span> SEO/GEO-Aufbau</div>
+      <p class="showcase-intro">Für DS Pflasterbau (Familienbetrieb, über 30 Jahre Erfahrung im Pflasterbau) habe ich die komplette Unternehmenswebsite konzipiert, redaktionell befüllt und live gebracht: Startseite, Leistungsseiten (Einfahrt, Terrasse, Hof, Gartenweg), Bauprojekte, Gewerbe-Seite, Team/Über uns sowie Impressum und Datenschutz.</p>
+      <p class="showcase-intro">Dazu gehörte eine ausführliche <strong>Keyword-Recherche</strong> (Zusammenführung und Bereinigung von Suchbegriffen aus mehreren Quellen inkl. Dubletten-Abgleich, Zuordnung von Suchvolumen, Wettbewerbsstärke und Suchabsicht), eine daraus abgeleitete <strong>Keyword-Landkarte</strong> mit Einordnung in die Stationen der Kundenreise (Aufmerksamkeit, Abwägung, Entscheidung, Bindung) sowie eine finale <strong>Seitenstruktur</strong>, die jede Leistungsseite gezielt auf die passenden Suchbegriffe ausrichtet. Ergänzt durch eine Wettbewerbsanalyse regionaler Anbieter, technische Bauregeln (u.a. Barrierearmut, Ladezeiten, Bildkomprimierung) sowie rechtlich abgestimmte Datenschutz- und Impressumstexte. Kein Übungsprojekt — die Seite ist live und wird aktiv von echten Kunden genutzt.</p>
+      <p class="showcase-hint">Live-Website, direkt eingebettet zum Durchklicken:</p>
+
+      <iframe class="showcase-frame" src="https://ds-pflasterbau.de" title="DS Pflasterbau Website (live)"></iframe>
+
+      <p class="showcase-hint">Falls die Vorschau nicht lädt: <a href="https://ds-pflasterbau.de" target="_blank" rel="noopener" style="color:#F97316;">ds-pflasterbau.de direkt öffnen ↗</a></p>
+
+      <div class="showcase-footer">Konzept, Umsetzung <span class="amp">&amp;</span> laufende Pflege: Amine Demir. Reales, live geschaltetes Projekt für DS Pflasterbau.</div>
     </div>
+
+    <div class="project-card">
+      <span class="project-tag">Erster Schritt im Projekt, Modul 1</span>
+      <div class="project-title">DS Pflasterbau: Social-Media- <span class="amp">&amp;</span> Content-Strategie</div>
+      <p>Bevor die Website entstand, habe ich im ersten Modul meiner Weiterbildung als Ausgangspunkt eine vollständige Social-Media-Strategie für DS Pflasterbau erarbeitet: Zielgruppenanalyse, Kanalstrategie, Content-Planung und Redaktionsplan. Daraus hat sich das größere Gesamtprojekt entwickelt, zu dem inzwischen auch die reale Website und die Kampagnen-Landingpage gehören.</p>
+    </div>
+
+    <div class="showcase showcase-ds">
+      <span class="showcase-tag">Beispielprojekt · Übungsaufgabe</span>
+      <div class="showcase-title">DS Pflasterbau: Social-Media-Strategie <span class="amp">&amp;</span> Abschlusspräsentation</div>
+      <p class="showcase-intro">Ausgangslage/Audit, Kanalstrategie, Instagram- und Facebook-Konzept, Video-Content und ein 20-Tage-Redaktionsplan. Zum Durchklicken:</p>
+      <p class="showcase-hint">Einmal in die Präsentation klicken, dann funktionieren Pfeiltasten und der Vorher/Nachher-Vergleich wie gewohnt.</p>
+
+      <iframe class="showcase-frame" src="ds-abschluss.html" onload="this.contentWindow.focus()"></iframe>
+
+      <p class="showcase-hint">Vorher/Nachher aus dem Konzept, fest als Bildpaare (funktioniert auch ohne Klicken):</p>
+      <div class="vn-gallery">
+        <div class="vn-pair">
+          <div class="vn-pair-imgs">
+            <img src="vn1-before.jpg" alt="Einfahrt vorher">
+            <img src="vn1-after.jpg" alt="Einfahrt nachher">
+          </div>
+          <span>Vorher &nbsp;·&nbsp; Nachher</span>
+        </div>
+        <div class="vn-pair">
+          <div class="vn-pair-imgs">
+            <img src="vn2-before.jpg" alt="Terrasse vorher">
+            <img src="vn2-after.jpg" alt="Terrasse nachher">
+          </div>
+          <span>Vorher &nbsp;·&nbsp; Nachher</span>
+        </div>
+        <div class="vn-pair">
+          <div class="vn-pair-imgs">
+            <img src="vn3-before.jpg" alt="Gehweg vorher">
+            <img src="vn3-after.jpg" alt="Gehweg nachher">
+          </div>
+          <span>Vorher &nbsp;·&nbsp; Nachher</span>
+        </div>
+      </div>
+
+      <div class="showcase-footer">Konzept <span class="amp">&amp;</span> Ausarbeitung: Amine Demir. Beispielprojekt im Rahmen der Weiterbildung, kein reales Kundenprojekt.</div>
+    </div>
+
+    <div class="case-group-label" id="detail-landingpage">Case Study 2 — Kampagnen-Landingpage</div>
+
+    <div class="showcase" style="background:#1A0E11; border-top-color: var(--bordeaux);">
+      <span class="showcase-tag" style="border-color: var(--bordeaux); color:#E7A0AC;">Live-Projekt · Meta-Ads-Landingpage</span>
+      <div class="showcase-title">DS Pflasterbau: Lokale Kampagnen-Landingpage Dillingen</div>
+      <p class="showcase-intro">Eigenständige, schlanke Landingpage außerhalb der Hauptnavigation, gezielt für eine lokale Meta-Ads-Kampagne für Dillingen und Umgebung gebaut (<code>noindex, follow</code> — bewusst nicht für die normale Google-Suche gedacht, sondern nur für den Kampagnen-Traffic). Enthält Meta-Pixel-Einbindung für Kampagnen-Tracking, DSGVO-konform über Cookiebot erst nach Einwilligung freigeschaltet, sowie eine klare, direkte Handlungsaufforderung (kostenlose Beratung anfragen) ohne Ablenkung durch Menüpunkte. Gehört zum selben Gesamtprojekt wie die Unternehmenswebsite, ist aber bewusst als eigenständige, schlankere Seite für Paid-Traffic konzipiert.</p>
+
+      <iframe class="showcase-frame" src="https://ds-pflasterbau.de/lp-dillingen.html" title="DS Pflasterbau Kampagnen-Landingpage Dillingen (live)"></iframe>
+
+      <p class="showcase-hint">Falls die Vorschau nicht lädt: <a href="https://ds-pflasterbau.de/lp-dillingen.html" target="_blank" rel="noopener" style="color:#E7A0AC;">Landingpage direkt öffnen ↗</a></p>
+
+      <div class="showcase-footer">Konzept <span class="amp">&amp;</span> Umsetzung: Amine Demir. Reales, live geschaltetes Projekt für DS Pflasterbau, Teil desselben Gesamtprojekts wie die Unternehmenswebsite.</div>
+    </div>
+
+    <div class="case-group-label" id="detail-fritzkola">Case Study 3 — Fritz-Kola</div>
 
     <div class="showcase">
       <span class="showcase-tag">Beispielprojekt · Übungsaufgabe</span>
@@ -564,7 +834,7 @@
   <div class="divider"></div>
 
   <!-- 4. KOMPETENZEN -->
-  <h2>Kompetenzen</h2>
+  <h2 id="kompetenzen">Kompetenzen</h2>
   <div class="skills-grid">
     <div class="skill-block">
       <div class="skill-cat">Social Media <span class="amp">&amp;</span> Content</div>
@@ -625,7 +895,7 @@
   <div class="divider"></div>
 
   <!-- 5. WEITERBILDUNG & ZERTIFIKAT -->
-  <h2>Aktuelle Weiterbildung <span class="amp">&amp;</span> Zertifikate</h2>
+  <h2 id="weiterbildung">Aktuelle Weiterbildung <span class="amp">&amp;</span> Zertifikate</h2>
   <div class="cert-intro">
     <p style="margin:0;">Ich befinde mich aktuell in der neunmonatigen Weiterbildung <strong>„E-Commerce- und Digitalmarketingmanagerin"</strong> bei der Akademie für digitale Zukunft (9 Module, 1.620 Unterrichtseinheiten, Mai 2026 bis voraussichtlich März 2027). Modul 1 habe ich bereits erfolgreich abgeschlossen, die weiteren Module und Zertifikate baue ich fortlaufend aus:</p>
   </div>
@@ -672,7 +942,7 @@
   <div class="divider"></div>
 
   <!-- 6. KONTAKT -->
-  <h2>Kontakt</h2>
+  <h2 id="kontakt">Kontakt</h2>
   <p>Amine Demir · Bauerngasse 19 · 86637 Wertingen<br>
   Tel. 0152 5259 2437 · aminedemir560@gmail.com</p>
 
