@@ -274,6 +274,62 @@
     margin-top: 8px;
     text-transform: uppercase;
   }
+
+  /* Zertifikat-Vorschaufenster */
+  .cert-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 14, 10, 0.72);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+  }
+  .cert-modal-overlay.open { display: flex; }
+  .cert-modal {
+    background: var(--creme);
+    border-radius: 12px;
+    width: min(820px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5);
+  }
+  .cert-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--nude);
+  }
+  .cert-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--espresso);
+  }
+  .cert-modal-actions { display: flex; align-items: center; gap: 16px; }
+  .cert-modal-actions a {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bordeaux);
+  }
+  .cert-modal-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--espresso);
+    cursor: pointer;
+    padding: 2px 6px;
+  }
+  .cert-modal-close:hover { color: var(--bordeaux); }
+  .cert-modal-body { flex: 1; background: #2b2622; }
+  .cert-modal-body iframe { width: 100%; height: 100%; min-height: 60vh; border: none; display: block; }
   .cert-card::before {
     content: '';
     position: absolute; left: 0; top: 0; bottom: 0;
@@ -924,19 +980,19 @@
   </div>
 
   <div class="cert-grid">
-    <a class="cert-card done" href="cer-2026-456.pdf" target="_blank" rel="noopener">
+    <a class="cert-card done" href="cer-2026-456.pdf" data-cert-modal data-cert-title="Social-Media Experte (m/w/d)">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Social-Media Experte (m/w/d)</div>
       <div class="cert-meta">180 UE · 08.06. bis 03.07.2026 · ADZ / Morphos GmbH</div>
       <span class="cert-link-hint">Zertifikat ansehen ↗</span>
     </a>
-    <a class="cert-card done" href="cer-2026-512.pdf" target="_blank" rel="noopener">
+    <a class="cert-card done" href="cer-2026-512.pdf" data-cert-modal data-cert-title="Social-Media Experte mit Vertiefung (m/w/d)">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Social-Media Experte mit Vertiefung (m/w/d)</div>
       <div class="cert-meta">180 UE · 06.07. bis 31.07.2026 · Social Recruiting, Employer Branding, Community Management</div>
       <span class="cert-link-hint">Zertifikat ansehen ↗</span>
     </a>
-    <a class="cert-card done" href="cer-2026-560.pdf" target="_blank" rel="noopener">
+    <a class="cert-card done" href="cer-2026-560.pdf" data-cert-modal data-cert-title="Online-Marketing Management (m/w/d)">
       <span class="cert-badge">Abgeschlossen</span>
       <div class="cert-name">Online-Marketing Management (m/w/d)</div>
       <div class="cert-meta">180 UE · 03.08. bis 28.08.2026 · SEO, Conversion-Optimierung, E-Mail-Marketing, KI-Tools</div>
@@ -1005,5 +1061,59 @@
   <footer>Bewerbungsportfolio · Amine Demir · Stand 09.07.2026</footer>
 
 </div>
+
+<div class="cert-modal-overlay" id="certModalOverlay">
+  <div class="cert-modal">
+    <div class="cert-modal-head">
+      <span class="cert-modal-title" id="certModalTitle">Zertifikat</span>
+      <div class="cert-modal-actions">
+        <a id="certModalOpenTab" href="#" target="_blank" rel="noopener">In neuem Tab öffnen ↗</a>
+        <button class="cert-modal-close" id="certModalClose" aria-label="Schließen">&times;</button>
+      </div>
+    </div>
+    <div class="cert-modal-body">
+      <iframe id="certModalFrame" src="" title="Zertifikat-Vorschau"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var overlay = document.getElementById('certModalOverlay');
+    var frame = document.getElementById('certModalFrame');
+    var titleEl = document.getElementById('certModalTitle');
+    var openTab = document.getElementById('certModalOpenTab');
+    var closeBtn = document.getElementById('certModalClose');
+
+    function openModal(url, title){
+      frame.src = url;
+      titleEl.textContent = title || 'Zertifikat';
+      openTab.href = url;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      overlay.classList.remove('open');
+      frame.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-cert-modal]').forEach(function(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        openModal(el.getAttribute('href'), el.getAttribute('data-cert-title'));
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e){
+      if(e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+    });
+  })();
+</script>
+
 </body>
 </html>
