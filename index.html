@@ -462,6 +462,16 @@
     box-shadow: 0 20px 45px -10px rgba(0,0,0,0.55);
     display: block;
   }
+  .ls-video { width: 100%; border-radius: 10px; background: #000; display: block; box-shadow: 0 20px 45px -10px rgba(0,0,0,0.55); }
+  .ls-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 22px 0 8px; }
+  .ls-stats div { background: rgba(255,255,255,0.06); border: 1px solid rgba(228,203,180,0.25); border-radius: 10px; padding: 14px 10px; text-align: center; }
+  .ls-stats b { display: block; font-family: 'Playfair Display', serif; font-size: 24px; color: var(--nude); line-height: 1.1; }
+  .ls-stats span { font-size: 12px; color: #C9BDB2; }
+  .ls-text { margin-top: 18px; max-width: 700px; }
+  .ls-text h3 { font-family: 'Playfair Display', serif; font-size: 19px; color: #fff; margin: 26px 0 8px; }
+  .ls-text p, .ls-text li { font-size: 14.5px; color: #C9BDB2; line-height: 1.7; }
+  .ls-text ul { padding-left: 20px; margin: 0 0 12px; }
+  .ls-text .showcase-hero { margin-top: 14px; }
   .showcase-hint {
     font-size: 12.5px;
     color: #C9BDB2;
@@ -601,6 +611,8 @@
   .case-thumb.thumb-fritzkola svg { stroke: var(--creme); }
   .case-thumb.thumb-buttinette { background: linear-gradient(135deg, #2E4A3D, #16281F); }
   .case-thumb.thumb-buttinette svg { stroke: var(--gold); }
+  .case-thumb.thumb-shop { background: linear-gradient(135deg, var(--nude), var(--cappuccino)); }
+  .case-thumb.thumb-shop svg { stroke: var(--espresso); }
   .case-badge {
     position: absolute;
     top: 12px; left: 12px;
@@ -779,6 +791,18 @@
         <span class="case-card-btn">Case Study ansehen</span>
       </div>
     </a>
+
+    <a class="case-card" href="#detail-lernshop">
+      <div class="case-thumb thumb-shop">
+        <span class="case-badge badge-concept">Übungsprojekt Weiterbildung, nie live</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"></path><path d="M9 7a3 3 0 016 0"></path></svg>
+      </div>
+      <div class="case-body">
+        <div class="case-card-title">Lernshop TN04: WooCommerce-Shop</div>
+        <p class="case-card-desc">Aufbau eines Test-Shops für Natursteinschmuck mit WordPress und WooCommerce, mit Sternzeichen-Finder, Varianten, Aktionen und Wartungskonzept. Der Shop war nie live.</p>
+        <span class="case-card-btn">Case Study ansehen</span>
+      </div>
+    </a>
   </div>
 
   <div class="projects">
@@ -936,6 +960,89 @@
       <p class="showcase-hint">Falls die Vorschau nicht lädt: <a href="performance-marketing-buttinette.pdf" target="_blank" rel="noopener" style="color: var(--gold);">PDF direkt öffnen ↗</a></p>
 
       <div class="showcase-footer">Konzept <span class="amp">&amp;</span> Ausarbeitung: Amine Demir. Beispielprojekt im Rahmen der Weiterbildung, kein reales Kundenprojekt oder Auftrag von buttinette.</div>
+    </div>
+
+    <div class="case-group-label" id="detail-lernshop">Case Study 5: Lernshop TN04</div>
+
+    <div class="showcase" style="background:#2A1A11; border-top-color: var(--cappuccino);">
+      <span class="showcase-tag" style="border-color: var(--cappuccino); color: var(--nude);">Übungsprojekt · Modul Shopsystem Administrator · nie live</span>
+      <div class="showcase-title">Lernshop TN04: Konzept und Aufbau eines WooCommerce-Shops</div>
+      <p class="showcase-intro" style="max-width:none;">Ich habe einen Test-Shop für Natursteinschmuck mit WordPress und WooCommerce aufgebaut, um zu zeigen, wie ein Shop aussehen und funktionieren kann. Er war nie live, es wurde nichts verkauft.</p>
+
+      <video class="ls-video" controls preload="metadata" poster="lernshop-tn04/video/poster.jpg" playsinline>
+        <source src="lernshop-tn04/video/durchklick.mp4" type="video/mp4">
+        Dein Browser kann das Video nicht abspielen.
+      </video>
+      <p class="showcase-hint">Durchklick durch den Shop aus Sicht der Besucher: Startseite, Sternzeichen-Finder, Shop, Produktseite mit Varianten, Warenkorb.</p>
+
+      <div class="ls-stats">
+        <div><b>21</b><span>Produkte</span></div>
+        <div><b>12</b><span>Sternzeichen im Finder</span></div>
+        <div><b>97</b><span>PageSpeed am Handy, vorher 87</span></div>
+        <div><b>7</b><span>Seiten für Recht und Vertrauen</span></div>
+        <div><b>14 von 14</b><span>Punkte der Projektcheckliste</span></div>
+      </div>
+
+      <div class="ls-text">
+        <h3>Die Aufgabe</h3>
+        <p>Ein Shop mit klarer Marke, der zeigt, was ein Shopsystem-Administrator können muss: Produkte pflegen, Versand und Zahlung einrichten, Recht umsetzen, Sicherheit und Wartung planen. Verkauft werden sollte nur nach Deutschland und Österreich.</p>
+
+        <h3>Marktanalyse und Positionierung</h3>
+        <p>Bevor ich gebaut habe, habe ich mir den Markt angesehen: Wer verkauft Natursteinschmuck, und womit werben die Shops? Dabei ist mir eine Lücke aufgefallen. Es gibt viele Shops für Edelsteine und viele Seiten zu Astrologie, aber kaum jemanden, der Steine, Astrologie und die islamische Überlieferung zusammenbringt. Genau dort setzt der Shop an.</p>
+
+        <h3>Mein Highlight: der Sternzeichen-Finder</h3>
+        <p>Aus dieser Marktlücke ist meine wichtigste Idee entstanden. Besucher sollen nicht einfach durch Produkte scrollen, sondern in zwei Klicks bei einem passenden Stein landen. Dafür habe ich eine Tabelle zur Orientierung aufgebaut: Zu jedem der 12 Sternzeichen gibt es Stärken, einen passenden Stein und einen zweiten Stein. Man wählt sein Sternzeichen, sieht das Ergebnis und kommt direkt zu den Produkten im Shop. Jede Empfehlung ist als Empfehlung aus der Überlieferung gekennzeichnet, ohne Wirkungsversprechen.</p>
+        <img class="showcase-hero" src="lernshop-tn04/video/finder.jpg" alt="Der Sternzeichen-Finder im Shop am Beispiel Löwe">
+        <p class="showcase-hint">Ergebnisfenster des Finders im Shop, Beispiel Löwe.</p>
+
+        <h3>Einfache und variable Produkte</h3>
+        <p>Ich habe beide Produktarten angelegt. Einfache Produkte wie ein Armband haben einen Preis und einen Bestand. Variable Produkte wie der Naturstein-Ring bieten mehrere Varianten, zum Beispiel drei Steine mit jeweils eigenem Preis. Die Varianten habe ich als anklickbare Felder gestaltet, damit Besucher nicht durch ein Auswahlmenü suchen müssen. Der Preis ändert sich direkt beim Auswählen.</p>
+
+        <h3>Bestseller, Black Friday und Willkommensgutschein</h3>
+        <p>Auf der Startseite habe ich einen Bereich mit Bestsellern eingebaut, damit Neukunden sofort sehen, was gut ankommt. Dazu habe ich zwei Aktionen eingerichtet:</p>
+        <ul>
+          <li>WELCOME10: 10 Prozent für Neukunden, nicht auf Sale-Artikel</li>
+          <li>BLACKFRIDAY: 20 Prozent bis 30.11., mit Banner und Angeboten auf der Startseite</li>
+        </ul>
+
+        <h3>Meine Arbeit mit WooCommerce</h3>
+        <ul>
+          <li>Produkte anlegen und pflegen, Kategorien, einheitliche Produktbilder, Kurztexte und Beschreibungen</li>
+          <li>Versandzonen und Versandkosten, Gutscheine, Steuern</li>
+          <li>Warenkorb und Kasse testen, Testbestellung mit Testzahlung</li>
+          <li>Design mit Divi und eigenen Markenfarben, Startseite und Kaufbereich</li>
+          <li>Plugins für Recht, Suchmaschinen, Backup, Cookie-Hinweis, Login-Schutz und Zwischenspeicher</li>
+          <li>Rechtliche Seiten und Pflichtangaben: Impressum, Datenschutz, AGB, Widerruf auch online, Versandinfos</li>
+          <li>Jede Änderung mit Backup davor und einem Weg zurück</li>
+        </ul>
+
+        <h3>Suchmaschinen und KI-Suche</h3>
+        <p>Ein Shop muss gefunden werden. Für jedes Produkt habe ich ein Fokus-Keyword festgelegt, nach einer Recherche, wonach Menschen suchen. Titel, Beschreibung und Text sind darauf ausgerichtet. Die Texte sind klar und ehrlich geschrieben, damit sie vertrauenswürdig wirken. Auf der Finder-Seite gibt es Fragen und Antworten, damit auch KI-Suchen den Inhalt gut einordnen können.</p>
+
+        <h3>Vertrauen, Tempo und Handy</h3>
+        <ul>
+          <li>Seite zur Echtheit von Bewertungen, klare Versandinfos, Widerruf auch online</li>
+          <li>Lokale Schrift, Zwischenspeicher und optimierte Bilder: Ladezeit am Handy von 87 auf 97</li>
+          <li>Alle Seiten am Handy geprüft, vor allem Kaufbereich, Warenkorb und Kontakt</li>
+          <li>Cookie-Hinweis ohne Tracker</li>
+        </ul>
+
+        <h3>Wartung und Sicherheit</h3>
+        <p>Ich habe vorbereitet, wie der Shop im Betrieb gepflegt würde: Backup mit Rücksicherung, Login-Schutz und ein Update-Plan nach dem Prinzip erst Backup, dann Test. Das habe ich getestet, im echten Betrieb ist es nicht gelaufen, weil der Shop nie live war.</p>
+
+        <h3>Rahmen und nächste Schritte</h3>
+        <p>Im Kurs konnte ich mit WordPress und den freien Plugins arbeiten. Pro-Versionen standen mir nicht zur Verfügung. Deshalb sind einige Dinge als nächste Schritte vermerkt und nicht umgesetzt. Wenn der Shop live gehen würde, wären das meine nächsten Änderungen:</p>
+        <ul>
+          <li>Einen echten Zahlungsanbieter direkt beim Anbieter einrichten</li>
+          <li>Einen Newsletter aufbauen, mit Anmeldung nach DSGVO und Willkommensgutschein als Anreiz</li>
+          <li>Die Rechtstexte durch eine fachkundige Stelle prüfen lassen, aktuell sind es Beispieltexte</li>
+          <li>Plugin-Updates erst im Testbetrieb prüfen, Funktionen der Pro-Versionen ergänzen, zum Beispiel den Preishinweis bei Sale-Preisen</li>
+          <li>Schriften der Marke umstellen</li>
+        </ul>
+        <p><a href="lernshop-tn04/Case_Study_Lernshop_TN04.pdf" target="_blank" rel="noopener" style="color: var(--nude);">Case Study als einseitiges PDF öffnen ↗</a></p>
+      </div>
+
+      <div class="showcase-footer">Konzept, Aufbau <span class="amp">&amp;</span> Pflege: Amine Demir. Übungsprojekt im Rahmen der Weiterbildung (Shopsystem Administrator, ADZ), kein reales Kundenprojekt. Der Shop war nie live.</div>
     </div>
 
   </div>

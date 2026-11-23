@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Lernshop TN04: Case Study von Amine Demir</title>
+<meta name="description" content="Test- und Konzeptshop für Natursteinschmuck mit WordPress und WooCommerce, aufgebaut im Kurs Shopsystem Administrator.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap');
+  :root{--espresso:#3B2417;--cappuccino:#A9754F;--nude:#E4CBB4;--bordeaux:#6E1E2C;--gold:#B99A5B;--creme:#FAF6F2}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--creme);color:var(--espresso);font-family:'Montserrat',sans-serif;line-height:1.7;font-size:16px}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 24px 96px}
+  a{color:var(--bordeaux)}
+  .back{font-size:13px;letter-spacing:.04em;text-decoration:none;display:inline-block;margin-bottom:28px}
+  .badge{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--bordeaux);border:1px solid var(--bordeaux);border-radius:99px;padding:4px 12px;margin-bottom:18px}
+  h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 14px}
+  h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(22px,3.4vw,28px);margin:56px 0 14px;line-height:1.3}
+  h2:after{content:"";display:block;width:56px;height:1px;background:var(--gold);margin-top:12px}
+  p{margin:0 0 14px}
+  .lead{font-size:18px;max-width:680px}
+  .meta{font-size:14px;opacity:.8;margin:0 0 28px}
+  video{width:100%;border-radius:10px;border:1px solid var(--nude);background:#000;display:block;margin:28px 0 8px}
+  .cap{font-size:13px;opacity:.7;margin:0 0 8px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:28px 0 0}
+  .stat{background:#fff;border:1px solid var(--nude);border-radius:10px;padding:18px 16px;text-align:center}
+  .stat b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--bordeaux);line-height:1.1}
+  .stat span{font-size:13px;opacity:.8}
+  ul{padding-left:20px;margin:0 0 14px}
+  li{margin:0 0 8px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border:1px solid var(--nude);border-radius:10px;overflow:hidden}
+  th{background:var(--espresso);color:var(--creme);text-align:left;padding:12px 14px;font-weight:600}
+  td{padding:12px 14px;border-top:1px solid var(--nude);vertical-align:top}
+  td:first-child{font-weight:600;width:42%}
+  .steps{counter-reset:s;list-style:none;padding:0}
+  .steps li{counter-increment:s;position:relative;padding:0 0 0 46px;margin-bottom:16px}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;border:1px solid var(--cappuccino);color:var(--cappuccino);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
+  .note{background:#fff;border-left:3px solid var(--cappuccino);padding:16px 20px;border-radius:0 10px 10px 0;margin:16px 0}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+  .tags span{font-size:13px;background:var(--nude);border-radius:99px;padding:4px 12px}
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--gold);font-size:14px;text-align:center}
+  @media (max-width:560px){.wrap{padding:36px 18px 72px}td:first-child{width:auto}}
+  @media print{body{background:#fff}video{display:none}.back{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html#case-studies">Zurück zum Portfolio</a>
+
+  <span class="badge">Übungsprojekt, nie live</span>
+  <h1>Lernshop TN04: Konzept und Aufbau eines WooCommerce-Shops</h1>
+  <p class="lead">Ich habe einen Test-Shop für Natursteinschmuck mit WordPress und WooCommerce aufgebaut, um zu zeigen, wie ein Shop aussehen und funktionieren kann. Er war nie live, es wurde nichts verkauft.</p>
+  <p class="meta">Konzept, Aufbau und Pflege: Amine Demir. Projektarbeit im Kurs Shopsystem Administrator.</p>
+
+  <video controls preload="metadata" poster="video/poster.jpg" playsinline>
+    <source src="video/durchklick.mp4" type="video/mp4">
+    Dein Browser kann das Video nicht abspielen.
+  </video>
+  <p class="cap">Durchklick durch den Shop aus Sicht der Besucher.</p>
+
+  <div class="stats">
+    <div class="stat"><b>21</b><span>Produkte</span></div>
+    <div class="stat"><b>12</b><span>Sternzeichen im Finder</span></div>
+    <div class="stat"><b>97</b><span>PageSpeed am Handy, vorher 87</span></div>
+    <div class="stat"><b>7</b><span>Seiten für Recht und Vertrauen</span></div>
+    <div class="stat"><b>14 von 14</b><span>Punkte der Projektcheckliste</span></div>
+  </div>
+
+  <h2>Die Aufgabe</h2>
+  <p>Ein Shop mit klarer Marke, der zeigt, was ein Shopsystem-Administrator können muss: Produkte pflegen, Versand und Zahlung einrichten, Recht umsetzen, Sicherheit und Wartung planen. Verkauft werden sollte nur nach Deutschland und Österreich.</p>
+
+  <h2>Marktanalyse und Positionierung</h2>
+  <p>Bevor ich gebaut habe, habe ich mir den Markt angesehen: Wer verkauft Natursteinschmuck, und womit werben die Shops? Dabei ist mir eine Lücke aufgefallen. Es gibt viele Shops für Edelsteine und viele Seiten zu Astrologie, aber kaum jemanden, der Steine, Astrologie und die islamische Überlieferung zusammenbringt. Genau dort setzt der Shop an.</p>
+
+  <h2>Mein Highlight: der Sternzeichen-Finder</h2>
+  <p>Aus dieser Marktlücke ist meine wichtigste Idee entstanden. Besucher sollen nicht einfach durch Produkte scrollen, sondern in zwei Klicks bei einem passenden Stein landen. Dafür habe ich eine Tabelle zur Orientierung aufgebaut: Zu jedem der 12 Sternzeichen gibt es Stärken, einen passenden Stein und einen zweiten Stein. Man wählt sein Sternzeichen, sieht das Ergebnis und kommt direkt zu den Produkten im Shop.</p>
+  <p>Jede Empfehlung ist als Empfehlung aus der Überlieferung gekennzeichnet, ohne Wirkungsversprechen. Der Finder verbindet Inhalt und Verkauf und unterscheidet den Shop von allem, was ich im Markt gesehen habe.</p>
+  <img src="video/finder.jpg" alt="Der Sternzeichen-Finder im Shop am Beispiel Löwe" style="width:100%;border-radius:10px;border:1px solid var(--nude);display:block;margin:20px 0 6px">
+  <p class="cap">Ergebnisfenster des Finders im Shop, Beispiel Löwe.</p>
+
+  <h2>Was ich damit gezeigt habe</h2>
+  <table>
+    <tr><th>Thema</th><th>Meine Arbeit im Shop</th></tr>
+    <tr><td>Einrichtung und Administration</td><td>Shop mit WordPress und WooCommerce aufgebaut, 21 Produkte, Kategorien, Varianten</td></tr>
+    <tr><td>Themes, Design, Struktur</td><td>Divi, eigene Markenfarben, Startseite, Kaufbereich</td></tr>
+    <tr><td>Produkt-, Bestell- und Kundenmanagement</td><td>Preise, Sale, Gutscheine, Versand mit DHL, Zahlungsarten</td></tr>
+    <tr><td>Plugins</td><td>Recht, Suchmaschinen, Backup, Cookie-Hinweis, Login-Schutz, Zwischenspeicher</td></tr>
+    <tr><td>Recht</td><td>Impressum, Datenschutz, AGB, Widerruf auch online, Versandinfos</td></tr>
+    <tr><td>Logistik und Prozesse</td><td>Versandablauf, Wartungsplan, jede Änderung mit Backup und Rückweg</td></tr>
+    <tr><td>Payment und Sicherheit</td><td>Testzahlung, Login-Schutz, tägliches Backup</td></tr>
+    <tr><td>Analyse und Optimierung</td><td>Ladezeit am Handy von 87 auf 97, Prüfung der Produktseiten</td></tr>
+  </table>
+
+  <h2>Meine Arbeit mit WooCommerce</h2>
+  <ul>
+    <li>Produkte anlegen und pflegen, einfache und variable Produkte, zum Beispiel ein Ring in drei Steinen</li>
+    <li>Kategorien, einheitliche Produktbilder, Kurztexte und Beschreibungen</li>
+    <li>Versandzonen und Versandkosten, Gutscheine, Steuern</li>
+    <li>Warenkorb und Kasse testen, Testbestellung mit Testzahlung</li>
+    <li>Rechtliche Seiten und Pflichtangaben</li>
+    <li>Jede Änderung mit Backup davor und einem Weg zurück</li>
+  </ul>
+
+  <h2>Einfache und variable Produkte</h2>
+  <p>Ich habe beide Produktarten angelegt. Einfache Produkte wie ein Armband haben einen Preis und einen Bestand. Variable Produkte wie der Naturstein-Ring bieten mehrere Varianten, zum Beispiel drei Steine mit jeweils eigenem Preis. Die Varianten habe ich als anklickbare Felder gestaltet, damit Besucher nicht durch ein Auswahlmenü suchen müssen. Der Preis ändert sich direkt beim Auswählen.</p>
+
+  <h2>Bestseller, Black Friday und Willkommensgutschein</h2>
+  <p>Auf der Startseite habe ich einen Bereich mit Bestsellern eingebaut, damit Neukunden sofort sehen, was gut ankommt. Dazu habe ich zwei Aktionen eingerichtet:</p>
+  <ul>
+    <li>WELCOME10: 10 Prozent für Neukunden, nicht auf Sale-Artikel</li>
+    <li>BLACKFRIDAY: 20 Prozent bis 30.11., mit Banner und Angeboten auf der Startseite</li>
+  </ul>
+
+  <h2>Suchmaschinen und KI-Suche</h2>
+  <p>Ein Shop muss gefunden werden. Für jedes Produkt habe ich ein Fokus-Keyword festgelegt, nach einer Recherche, wonach Menschen suchen. Titel, Beschreibung und Text sind darauf ausgerichtet. Die Texte sind klar und ehrlich geschrieben, damit sie vertrauenswürdig wirken. Auf der Finder-Seite gibt es Fragen und Antworten, damit auch KI-Suchen den Inhalt gut einordnen können.</p>
+
+  <h2>Vertrauen, Tempo und Handy</h2>
+  <ul>
+    <li>Seite zur Echtheit von Bewertungen, klare Versandinfos, Widerruf auch online</li>
+    <li>Lokale Schrift, Zwischenspeicher und optimierte Bilder für kurze Ladezeiten</li>
+    <li>Alle Seiten am Handy geprüft, vor allem Kaufbereich, Warenkorb und Kontakt</li>
+    <li>Cookie-Hinweis ohne Tracker</li>
+  </ul>
+
+  <h2>Wartung und Sicherheit</h2>
+  <p>Ich habe vorbereitet, wie der Shop im Betrieb gepflegt würde: Backup mit Rücksicherung, Login-Schutz und ein Update-Plan nach dem Prinzip erst Backup, dann Test. Das habe ich getestet, im echten Betrieb ist es nicht gelaufen, weil der Shop nie live war.</p>
+
+  <h2>Rahmen und nächste Schritte</h2>
+  <div class="note">
+    <p>Im Kurs konnte ich mit WordPress und den freien Plugins arbeiten. Pro-Versionen standen mir nicht zur Verfügung. Deshalb sind einige Dinge als nächste Schritte vermerkt und nicht umgesetzt.</p>
+  </div>
+  <p>Wenn der Shop live gehen würde, wären das meine nächsten Änderungen:</p>
+  <ul>
+    <li>Einen echten Zahlungsanbieter direkt beim Anbieter einrichten</li>
+    <li>Einen Newsletter aufbauen, mit Anmeldung nach DSGVO und Willkommensgutschein als Anreiz</li>
+    <li>Die Rechtstexte durch eine fachkundige Stelle prüfen lassen, aktuell sind es Beispieltexte</li>
+    <li>Plugin-Updates erst im Testbetrieb prüfen</li>
+    <li>Funktionen der Pro-Versionen ergänzen, zum Beispiel den Preishinweis bei Sale-Preisen</li>
+    <li>Schriften der Marke umstellen</li>
+  </ul>
+  <div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Divi</span><span>SEO</span><span>Recht im E-Commerce</span><span>Wartung</span></div>
+
+  <h2>Qualifikation</h2>
+  <p>Shopsystem Administrator (m/w/d) online, 180 Unterrichtseinheiten, Akademie für digitale Zukunft (Morphos GmbH). Teil der laufenden Weiterbildung zur E-Commerce-Managerin, voraussichtlicher Abschluss 03/2027.</p>
+
+  <footer>Kontakt findest du im <a href="../index.html#kontakt">Portfolio</a>.</footer>
+</div>
+</body>
+</html>
